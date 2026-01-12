@@ -1,0 +1,479 @@
+/* ===== General ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.flight-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header & Navigation ===== */
+.header {
+  background: #0077b6;
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.nav-buttons button {
+  margin: 0 8px;
+  padding: 8px 14px;
+  border: none;
+  background: white;
+  color: #0077b6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-buttons .login-btn {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url(https://thefederal.com/file/2019/07/MW-HE536_airpla_20190225131547_ZH.jpg)
+    no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Search Section ===== */
+.search-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.flight-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flight-form input,
+.flight-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.flight-form button {
+  padding: 10px 20px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Flight Results ===== */
+.results {
+  padding: 30px;
+}
+
+.flight-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.flight-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.flight-card h4 {
+  margin: 0 0 10px;
+}
+
+.flight-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.flight-card button {
+  margin-top: 10px;
+  background: #ff6b6b;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Seat Map ===== */
+.seat-map-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f1faff;
+}
+
+.seat-map-section h3 {
+  margin-bottom: 15px;
+}
+
+.airplane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eef7ff;
+  padding: 25px;
+  border-radius: 40px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.cockpit {
+  background: #0077b6;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.cabin {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* ===== Class Labels ===== */
+.class-label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 10px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  display: inline-block;
+}
+
+.business-label {
+  background: #ffb703;
+}
+
+.economy-label {
+  background: #0077b6;
+}
+
+/* ===== Seat Rows ===== */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.aisle {
+  width: 30px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Business Class ===== */
+.business {
+  background: #ffe599; /* golden yellow */
+}
+
+.business:hover {
+  background: #ffd166;
+}
+
+.business.selected {
+  background: #ff9e00;
+  color: white;
+}
+
+/* ===== Economy Class ===== */
+.economy {
+  background: #bde0fe; /* light blue */
+}
+
+.economy:hover {
+  background: #a3d3fc;
+}
+
+.economy.selected {
+  background: #0077b6;
+  color: white;
+}
+
+/* ===== Tail Section ===== */
+.tail {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  border-radius: 0 0 20px 20px;
+  width: 60%;
+  margin-top: 10px;
+}
+
+
+/* ===== Class Sections ===== */
+.class-label {
+  font-weight: bold;
+  margin: 15px 0 5px;
+  padding: 6px 12px;
+  background: #0077b6;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.business-class .seat {
+  background: #ffd166; /* Golden for business */
+}
+
+.business-class .seat.selected {
+  background: #ff9e00;
+  color: white;
+}
+
+.economy-class .seat {
+  background: #bde0fe; /* Light blue for economy */
+}
+
+.economy-class .seat.selected {
+  background: #0077b6;
+  color: white;
+}
+
+/* ===== Confirm Button ===== */
+.confirm-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ===== Passenger Form ===== */
+.passenger-form {
+  margin-top: 20px;
+  text-align: left;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.passenger-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+.passenger-card input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.passenger-gender-select {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+/* ===== PNR Section ===== */
+.pnr-section {
+  text-align: center;
+  background: #e9f5ff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+/* ===== Login Modal ===== */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 320px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+}
+
+.tab.active {
+  background: #0077b6;
+  color: white;
+}
+
+.form-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: auto;
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+/* ===== Payment Section ===== */
+.payment-section {
+  text-align: center;
+  background: #f9fcff;
+  padding: 40px 20px;
+}
+
+.payment-form {
+  display: inline-block;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form input {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ===== Legend ===== */
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.legend-item {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+
+.legend-item.business {
+  background: #ffd166;
+  color: #333;
+}
+
+.legend-item.economy {
+  background: #0077b6;
+}
